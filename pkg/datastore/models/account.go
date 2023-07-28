@@ -2,22 +2,16 @@ package models
 
 import (
 	"encoding/json"
-	"time"
 
 	"github.com/seungjulee/fake-solana-indexer/pkg/types"
-	"gorm.io/gorm"
 )
 
 type Account struct {
-	CreatedAt time.Time
-	UpdatedAt time.Time
-	DeletedAt gorm.DeletedAt `gorm:"index"`
-
-	Id string `json:"id" gorm:"index:idx_id_version,priority:2"`
+	AccountId string `json:"id"`
 	AccountType string `json:"accountType"`
-	Tokens int `json:"tokens"`
+	Tokens int `json:"tokens" gorm:"index:,sort:desc"`
 	CallbackTimeMS int `json:"callbackTimeMS"`
-	Version int `json:"version" gorm:"index:idx_id_version,priority:1"`
+	Version int `json:"version"`
 	Data string `json:"data"`
 }
 
@@ -29,7 +23,7 @@ func ConvertAccount(account types.Account) (Account, error) {
 	strData := string(jsonBytes)
 
 	return Account{
-		Id: account.Id,
+		AccountId: account.Id,
 		AccountType: string(account.AccountType),
 		Tokens: account.Tokens,
 		CallbackTimeMS: account.CallbackTimeMS,

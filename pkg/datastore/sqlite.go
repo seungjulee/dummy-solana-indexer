@@ -43,3 +43,21 @@ func (s *sqliteDB) SaveAccount(tAccount types.Account) error {
 	}
 	return s.db.Create(&account).Error
 }
+
+func (s *sqliteDB) GetHigestTokenValueAccount() (models.Account, error) {
+
+// 	SELECT
+// 	account_id, account_type, tokens, MAX(version)
+// FROM
+// 	accounts
+// GROUP BY
+// 	account_id
+// ORDER BY
+// 	tokens DESC;
+
+	var account models.Account
+	if err := s.db.Model(&models.Account{}).Select("account_id, account_type, tokens, max(version) as latest_version").Group("account_id").Order("tokens desc").First(&account).Error; err != nil {
+		return models.Account{}, err
+	}
+	return account, nil
+}
