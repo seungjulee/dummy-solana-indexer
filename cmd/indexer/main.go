@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/seungjulee/fake-solana-indexer/pkg/datastore"
-	"github.com/seungjulee/fake-solana-indexer/pkg/indexer"
-	"github.com/seungjulee/fake-solana-indexer/pkg/logger"
+	"github.com/seungjulee/dummy-solana-indexer/pkg/datastore"
+	"github.com/seungjulee/dummy-solana-indexer/pkg/indexer"
+	"github.com/seungjulee/dummy-solana-indexer/pkg/logger"
 	"go.uber.org/zap"
 )
 

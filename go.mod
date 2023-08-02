@@ -1,4 +1,4 @@
-module github.com/seungjulee/fake-solana-indexer
+module github.com/seungjulee/dummy-solana-indexer
 
 go 1.20
 

@@ -7,8 +7,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/seungjulee/fake-solana-indexer/pkg/logger"
-	"github.com/seungjulee/fake-solana-indexer/pkg/types"
+	"github.com/seungjulee/dummy-solana-indexer/pkg/logger"
+	"github.com/seungjulee/dummy-solana-indexer/pkg/types"
 )
 
 func loadFakeAccount(path string) ([]types.Account, error) {

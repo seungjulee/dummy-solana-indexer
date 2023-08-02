@@ -5,9 +5,9 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/seungjulee/fake-solana-indexer/pkg/datastore"
-	"github.com/seungjulee/fake-solana-indexer/pkg/logger"
-	"github.com/seungjulee/fake-solana-indexer/pkg/types"
+	"github.com/seungjulee/dummy-solana-indexer/pkg/datastore"
+	"github.com/seungjulee/dummy-solana-indexer/pkg/logger"
+	"github.com/seungjulee/dummy-solana-indexer/pkg/types"
 	"go.uber.org/zap"
 )
 

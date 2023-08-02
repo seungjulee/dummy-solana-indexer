@@ -3,7 +3,7 @@ package models
 import (
 	"encoding/json"
 
-	"github.com/seungjulee/fake-solana-indexer/pkg/types"
+	"github.com/seungjulee/dummy-solana-indexer/pkg/types"
 )
 
 type Account struct {

@@ -1,9 +1,9 @@
 package datastore
 
 import (
-	"github.com/seungjulee/fake-solana-indexer/pkg/datastore/models"
-	"github.com/seungjulee/fake-solana-indexer/pkg/logger"
-	"github.com/seungjulee/fake-solana-indexer/pkg/types"
+	"github.com/seungjulee/dummy-solana-indexer/pkg/datastore/models"
+	"github.com/seungjulee/dummy-solana-indexer/pkg/logger"
+	"github.com/seungjulee/dummy-solana-indexer/pkg/types"
 
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
